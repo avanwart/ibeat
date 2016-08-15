@@ -3350,6 +3350,28 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/library\/images\/bedroom2.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 66081,
+		"inputAbbreviatedPath": "\/library\/images\/bedroom2.jpg",
+		"outputAbbreviatedPath": "\/library\/images\/bedroom2.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/library\/images\/bedroom3.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 322457,
+		"inputAbbreviatedPath": "\/library\/images\/bedroom3.jpg",
+		"outputAbbreviatedPath": "\/library\/images\/bedroom3.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/library\/images\/big-watch-face.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -3460,6 +3482,39 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/library\/images\/ortho-back.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 118924,
+		"inputAbbreviatedPath": "\/library\/images\/ortho-back.jpg",
+		"outputAbbreviatedPath": "\/library\/images\/ortho-back.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/library\/images\/ortho-front.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 131805,
+		"inputAbbreviatedPath": "\/library\/images\/ortho-front.jpg",
+		"outputAbbreviatedPath": "\/library\/images\/ortho-front.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/library\/images\/ortho-side.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 119708,
+		"inputAbbreviatedPath": "\/library\/images\/ortho-side.jpg",
+		"outputAbbreviatedPath": "\/library\/images\/ortho-side.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/library\/images\/silver-watch.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -3489,6 +3544,28 @@
 		"initialSize": 8224,
 		"inputAbbreviatedPath": "\/library\/images\/twitter-logo.jpg",
 		"outputAbbreviatedPath": "\/library\/images\/twitter-logo.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/library\/images\/watch-contacts.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 0,
+		"inputAbbreviatedPath": "\/library\/images\/watch-contacts.png",
+		"outputAbbreviatedPath": "\/library\/images\/watch-contacts.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/library\/images\/watch-emergency.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 0,
+		"inputAbbreviatedPath": "\/library\/images\/watch-emergency.png",
+		"outputAbbreviatedPath": "\/library\/images\/watch-emergency.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -3533,6 +3610,17 @@
 		"initialSize": 475883,
 		"inputAbbreviatedPath": "\/library\/images\/watch-heart-rate.png",
 		"outputAbbreviatedPath": "\/library\/images\/watch-heart-rate.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/library\/images\/watch-time.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 0,
+		"inputAbbreviatedPath": "\/library\/images\/watch-time.png",
+		"outputAbbreviatedPath": "\/library\/images\/watch-time.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0

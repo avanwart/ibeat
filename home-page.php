@@ -28,9 +28,10 @@ Template Name: Home Page
 				</div>
 			</div>
 		</div>
-		<a href="#hero2" class="scroll"><i class="glyphicon glyphicon-chevron-down"></i></a>
-	</section>
+<!-- 		<a href="#hero2" class="scroll"><i class="glyphicon glyphicon-chevron-down"></i></a>
+ -->	</section>
 	<section class="section hero pane-2" id="hero2">
+		<div class="bg"></div>
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-12 col-md-10 col-md-offset-1 col-lg-6 col-lg-offset-0">
@@ -51,11 +52,12 @@ Template Name: Home Page
 				</div>
 			</div>
 		</div>
-		<div class="bg"></div>
-		<a href="#hero3" class="scroll"><i class="glyphicon glyphicon-chevron-down"></i></a>
+		<!-- <a href="#hero3" class="scroll"><i class="glyphicon glyphicon-chevron-down"></i></a> -->
 	</section>
 	<section class="section hero purple pane-3" id="hero3">
-		
+		<div class="bg">
+			<!-- <img class="face" src="<?php bloginfo('template_directory'); ?>/library/images/contacts.gif" alt=""> -->
+		</div>
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-12 col-md-10 col-md-offset-1 col-lg-6 col-lg-offset-0">
@@ -76,10 +78,7 @@ Template Name: Home Page
 				</div>
 			</div>
 		</div>
-		<div class="bg">
-			<img class="face" src="<?php bloginfo('template_directory'); ?>/library/images/contacts.gif" alt="">
-		</div>
-		<a href="#hero4" class="scroll"><i class="glyphicon glyphicon-chevron-down"></i></a>
+		<!-- <a href="#hero4" class="scroll"><i class="glyphicon glyphicon-chevron-down"></i></a> -->
 	</section>
 	<section class="section hero pink pane-4" id="hero4">
 		<div class="bg"></div>
@@ -103,9 +102,12 @@ Template Name: Home Page
 				</div>
 			</div>
 		</div>
-		<a href="#hero5" class="scroll"><i class="glyphicon glyphicon-chevron-down"></i></a>
+		<!-- <a href="#hero5" class="scroll"><i class="glyphicon glyphicon-chevron-down"></i></a> -->
 	</section>
 	<section class="section hero pane-5" id="hero5">
+		<div class="bg">
+			<!-- <img src="<?php bloginfo('template_directory'); ?>/library/images/assistance.gif" alt="" class="face"> -->
+		</div>
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-12 col-md-10 col-md-offset-1 col-lg-6 col-lg-offset-0">
@@ -126,49 +128,72 @@ Template Name: Home Page
 				</div>
 			</div>
 		</div>
-		<div class="bg">
-			<img src="<?php bloginfo('template_directory'); ?>/library/images/assistance.gif" alt="" class="face">
-		</div>
-		<a href="#features" class="scroll2"><i class="glyphicon glyphicon-chevron-down"></i></a>
+		<!-- <a href="#features" class="scroll2"><i class="glyphicon glyphicon-chevron-down"></i></a> -->
 	</section>
-
-</div>
-
-	<section class="logos lightGrey" id="logos">
+	<section class="section features" id="features">
 		<div class="container">
+			<h2 class="push">Meet Your New Smartwatch</h2>
 			<div class="row">
-				<div class="col-lg-2 col-lg-offset-1 clients text-center">Client Logos:</div>
-				<div class="col-lg-8">
+				<div class="col-sm-10 col-sm-offset-1 col-md-9 col-md-offset-2">
 					<div class="row">
-						<div class="col-xs-6 col-sm-2"><img src="http://placehold.it/100x40" alt=""></div>
-						<div class="col-xs-6 col-sm-2"><img src="http://placehold.it/100x40" alt=""></div>
-						<div class="col-xs-6 col-sm-2"><img src="http://placehold.it/100x40" alt=""></div>
-						<div class="col-xs-6 col-sm-2"><img src="http://placehold.it/100x40" alt=""></div>
-						<div class="col-xs-6 col-sm-2"><img src="http://placehold.it/100x40" alt=""></div>
-						<div class="col-xs-6 col-sm-2"><img src="http://placehold.it/100x40" alt=""></div>
+						<div class="img-slides col-sm-4" id="slides">
+							<img id="img1" class="active" src="<?php bloginfo('template_directory'); ?>/library/images/ortho-front.jpg" alt="">
+							<img id="img2" src="<?php bloginfo('template_directory'); ?>/library/images/ortho-side.jpg" alt="">
+							<img id="img3" src="<?php bloginfo('template_directory'); ?>/library/images/ortho-back.jpg" alt="">
+						</div>
+						<div class="col-sm-8">
+							<ul id="slide-cntrl" class="slide-cntrl">
+								<li class="active" id="slide1">
+									<h3>Rechargeable Battery</h3>
+									<p>Neque facilis harum accusamus dolore facere voluptates placeat consectetur numquam.</p>
+								</li>
+								<li id="slide2">
+									<h3>3G Connectivity + GPS</h3>
+									<p>Neque facilis harum accusamus dolore facere voluptates placeat consectetur numquam.</p>
+								</li>
+								<li id="slide3">
+									<h3>Waterproof + Breathable and comfortable band</h3>
+									<p>Neque facilis harum accusamus dolore facere voluptates placeat consectetur numquam.</p>
+								</li>
+							</ul>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-	</section>
-	<section class=" light" id="features">
-		<div class="container">
-			<div class="row">
-				<div class="col-sm-12">
-					<h1 class="push">Meet Your New </h1>
-				</div>
-			</div>
-		</div>
-	</section>
+		<script>
+			jQuery('#slide-cntrl li').mouseover(function(){
 
+				jQuery('#slide-cntrl li').removeClass('active');
+				jQuery(this).toggleClass('active');
 
-	<section class=" ash" id="faq">
+			});
+
+			jQuery('#slide1').mouseover(function(){
+
+				jQuery('.img-slides img').removeClass('active');
+				jQuery('#img1').addClass('active');
+
+			});
+
+			jQuery('#slide2').mouseover(function(){
+
+				jQuery('.img-slides img').removeClass('active');
+				jQuery('#img2').addClass('active');
+
+			});
+
+			jQuery('#slide3').mouseover(function(){
+
+				jQuery('.img-slides img').removeClass('active');
+				jQuery('#img3').addClass('active');
+
+			});
+		</script>
+	</section>
+	<section class="section fp-normal-scroll ash faq" id="faq">
 		<div class="container">
-			<div class="row">
-				<div class="col-lg-10 col-lg-offset-1">
-					<h1 class="push">Frequently Asked Questions</h1>
-				</div>
-			</div>
+			<h2 class="push">Frequently Asked Questions</h2>
 			<div class="row">
 				<div class="col-sm-12 col-md-8 col-md-offset-2">
 					<!-- Get FAQ Repeater custom fields from this Page -->
@@ -199,6 +224,7 @@ Template Name: Home Page
 			</div>
 		</div>
 	</section>
+</div>
 
 <script src="<?php bloginfo('template_directory'); ?>/library/js/min/app-min.js"></script>
 	<!-- <script>
@@ -214,25 +240,10 @@ Template Name: Home Page
 	jQuery(document).ready(function($){
 
 		$('#fullpage').fullpage({
-			anchors: ['pane1', 'pane2', 'pane3', 'pane4', 'pane5', 'features', 'faq'],
-			scrollingSpeed: 1000,
-			autoScrolling: true,
-      afterSlideLoad: function( anchorLink, index, slideAnchor, slideIndex){
-          var loadedSlide = $(this);
-
-          //first slide of the second section
-          if(anchorLink == 'pane2' && slideIndex == 1){
-              alert("First slide loaded");
-          }
-
-          //second slide of the second section (supposing #secondSlide is the
-          //anchor for the second slide
-          if(index == 2 && slideIndex == 'secondSlide'){
-              alert("Second slide loaded");
-          }
-      },
-      fixedElements: '.content, .bg',
-      normalScrollElements: '.footer, #features, #faq'
+			paddingTop: '70px',
+			css3: false,
+			fitToSection: false,
+			hybrid: true
 		});
 
 		
@@ -251,7 +262,7 @@ Template Name: Home Page
 		    }
 		  } else {
 		    // element has gone out of viewport
-		    $('.navbar').addClass('dark');
+		    //$('.navbar').addClass('dark');
 		  }
 		});
 
@@ -322,13 +333,15 @@ Template Name: Home Page
 		      // whole part of element is visible
 		      $('.hero').removeClass('active');
 		      $('#hero5').addClass('active');
+		      $('.navbar').removeClass('dark');
+		      $('.hero .bg').show();
 		    }
 		  } else {
 		    // element has gone out of viewport
 		  }
 		});
 
-		$('#logos').bind('inview', function (event, visible, topOrBottomOrBoth) {
+		$('#features').bind('inview', function (event, visible, topOrBottomOrBoth) {
 		  if (visible == true) {
 		    
 		    if (topOrBottomOrBoth == 'top') {
@@ -339,6 +352,8 @@ Template Name: Home Page
 		    } else {
 		      // whole part of element is visible
 		      $('.hero ').removeClass('active');
+		      $('.hero .bg').hide();
+		      $('.navbar').addClass('dark');
 		    }
 		  } else {
 		    // element has gone out of viewport
