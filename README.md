@@ -1,34 +1,6 @@
-<<<<<<< HEAD
-# Bones
-__A Lightweight Wordpress Development Theme__
+# iBeat
+__A sleek and stylish smartwatch that continually monitors your heart for life-threatening emergencies__
 
-Bones is designed to make the life of developers easier. It's built
-using HTML5 & has a strong semantic foundation. It was updated recently
-using some of the HTML5 Boilerplate's recommended markup and setup.
-It's constantly growing so be sure to check back often if you are a
-frequent user. I'm always open to contribution. :)
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur corrupti animi cumque aut, labore temporibus quidem nulla repudiandae sed dolor nisi, aperiam provident! Blanditiis amet ipsam, recusandae dignissimos eveniet! Doloremque.
 
-Designed by **Eddie Machado**: http://themble.com/bones
-
-Special Thanks to:
-* Paul Irish & the HTML5 Boilerplate
-* Yoast for some WP functions & optimization ideas
-* Andrew Rogers for code optimization
-* David Dellanave for speed & code optimization
-* and several other developers. :)
-
-Submit Bugs & or Fixes:
-https://github.com/eddiemachado/bones/issues
-
-
-## License
-__[WTFPL](http://sam.zoy.org/wtfpl/)__
-
-	Are You Serious? Yes.
-
-
-## Meta
-* [Changelog](../../blob/master/CHANGELOG.md)
-=======
-# bauers
->>>>>>> 30b4af2bb2dd146d9146d42203cabe7134465d4b
+Designed by **Andrew Van Wart**
