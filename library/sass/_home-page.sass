@@ -1,0 +1,235 @@
+body.home
+	padding-top: 0
+	section
+		padding: 4em 0
+		h1, h2, h3
+			line-height: 1.3
+		h1
+			font-size: 3em
+			text-align: center
+
+
+	.hero
+		height: 680px
+		text-align: left
+		position: relative
+		&.active
+			.bg
+				opacity: 1
+				.face
+					opacity: 1
+			.content
+				opacity: 1
+		.bg
+			position: absolute
+			top: 0
+			left: 0
+			right: 0
+			bottom: 0
+			display: block
+			height: 100%
+			background-attachment: fixed
+			background-repeat: no-repeat
+			-webkit-perspective: 1000
+			z-index: 1
+			.face
+				opacity: 0
+				transition: opacity .5s ease-in-out
+				position: fixed
+				width: 216px
+				left: 792px
+				top: 245px
+				-webkit-perspective: 1000
+				z-index: 1
+		&.pane-1
+			background: #1e8ecf
+			background-image: -webkit-radial-gradient(closest-corner,rgba(16,47,70,0) 60%,rgba(16,47,70,.26)),-webkit-linear-gradient(bottom right,#26d0ce,#1a2980 90%)
+			background-image: radial-gradient(closest-corner,rgba(16,47,70,0) 60%,rgba(16,47,70,.26)),linear-gradient(to top left,#26d0ce,#1a2980 90%)
+			// background: url('../images/bedroom.jpg') center center no-repeat
+			// background-size: cover
+			.bg
+				background-color: transparent
+				background-image: url('../images/silver-watch.png')
+				background-position: 80% 65%
+				background-size: auto 60%
+		&.pane-2
+			background-image: url('../images/night-sky.jpg')
+			background-position: center center
+			background-size: cover
+			.bg
+				background-image: url('../images/watch-heart-rate.png')
+				background-position: 75% center
+				background-repeat: no-repeat
+				background-size: auto 100%
+		&.pane-3
+			background-image: url('../images/field.jpg')
+			background-position: center center
+			background-size: cover
+			.bg
+				background-image: url('../images/watch-face-blank.png')
+				background-position: 75% center
+				background-repeat: no-repeat
+				background-size: auto 100%
+
+		&.pane-4, &.pane-5
+			.bg
+				background-image: url('../images/watch-face2.png')
+				background-position: 75% center
+				background-repeat: no-repeat
+				background-size: auto 100%
+		&.pane-4
+			// background: #cb2d3e
+			// background: -webkit-linear-gradient(to left, #cb2d3e , #ef473a)
+			// background: linear-gradient(to left, #cb2d3e , #ef473a)
+			background: url('../images/hiking-trail.jpg') center center no-repeat
+			background-size: cover
+				
+		&.pane-5
+			// background: #9D50BB
+			// background: -webkit-linear-gradient(to left, #9D50BB , #6E48AA)
+			// background: linear-gradient(to left, #9D50BB , #6E48AA)
+			background: url('../images/bedroom.jpg') center center no-repeat
+			background-size: cover
+			.bg
+				background-image: url('../images/watch-face-blank.png')
+				background-position: 75% center
+				background-repeat: no-repeat
+				background-size: auto 100%
+				
+		.scroll, .scroll2
+			position: absolute
+			left: 50%
+			bottom: 40px
+			margin-left: -20px
+			z-index: 99
+			i
+				font-size: 2em
+				color: rgba(255, 255, 255, .78)
+		.content
+			opacity: 0
+			transition: opacity .5s ease-in-out
+			position: fixed
+			top: 0
+			width: 550px
+			padding-top: 90px
+			-webkit-perspective: 1000
+			z-index: 1
+		h1
+			margin-top: 120px
+			font-size: 3em
+			text-align: left
+			color: white
+		h2
+			font-weight: normal
+			font-size: 19px
+			margin-bottom: 1.5em
+			text-align: left
+			color: white
+			line-height: 1.4
+		.form-control
+			height: 51px
+			border: none
+			border-radius: 4px
+			padding: 10px 15px
+
+	.logos
+		background: $ash
+		padding: 1.5em 0
+		border-bottom: 1px solid #dadada
+		.col-sm-2
+			text-align: center
+			float: none
+			display: inline-block
+			vertical-align: middle
+			width: 16.1%
+		img
+			display: inline-block
+			vertical-align: middle
+			width: 80px
+			height: auto
+		.ea
+			img
+				width: 50px
+		.pge
+			img
+				width: 36px
+		.levis
+			img
+				width: 50px
+		.livenation
+			img
+				width: 100px
+		.clients
+			text-transform: uppercase
+			color: #777
+			line-height: 56px
+			font-size: 18px
+			letter-spacing: 1px
+			font-weight: 100
+
+
+	.testimonials
+		.thumbnail
+			position: relative
+			height: 130px
+			width: auto
+			display: inline-block
+			border-radius: 100px
+			border: 1px solid #dadada
+		h1
+			margin-bottom: 40px
+			i
+				font-size: .8em
+				margin: 0 8px 0 4px
+		h2
+			font-weight: normal
+			font-size: 18px
+			margin: 0 0 20px
+		blockquote
+			display: inline-block
+			position: relative
+			border-radius: 2px
+			padding: 0 20px 15px
+			font-style: italic
+			border: none
+			font-size: 15px
+			line-height: 1.5
+			margin: 0 0 30px
+			clear: both
+			&:before
+				content: '“'
+				font-family: Georgia, serif
+				color: #dadada
+				display: inline-block
+				position: relative
+				font-size: 60px
+				line-height: 1
+			small
+				margin-top: 20px
+				font-size: 14px
+				white-space: nowrap
+				font-style: normal
+				font-weight: bold
+				color: $black
+				font-family: 'Open Sans', sans-serif
+				strong
+					display: block
+					white-space: normal
+			img
+				height: 20px
+				width: auto
+
+	.pricing
+		.card
+			background: $ash
+			padding: 30px
+			text-align: center
+			h2
+				margin: 20px 0 10px
+				font-size: 32px
+			h3
+				margin-bottom: 60px
+				font-size: 20px
+		&.ash
+			.card
+				background: white

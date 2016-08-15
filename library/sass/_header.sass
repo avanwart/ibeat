@@ -1,0 +1,27 @@
+$navbarHeight: 70px
+
+.navbar
+	background: rgba(0, 0, 0, .55)
+	border: none
+	&.dark
+		background: rgba(0, 0, 0, .95)
+	.navbar-header
+		.navbar-brand
+			display: block
+			background: url('../images/logo-2x.png') center 15px no-repeat
+			background-size: auto $navbarHeight/1.75
+			padding: 0
+			width: 100px
+			height: $navbarHeight
+			text-indent: -9999px
+	.navbar-collapse
+		.navbar-nav
+			li
+				a
+					padding: 0 30px
+					line-height: $navbarHeight
+					color: white
+					font-size: 14px
+					text-transform: uppercase
+					letter-spacing: 1px
+
