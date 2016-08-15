@@ -22,6 +22,16 @@ body.home
 			.bg
 				.face
 					opacity: 1
+		&.on
+			.content
+				opacity: 1
+		.content
+			opacity: 0
+			transition: opacity .5s ease-in-out
+			transition-delay: .5s
+			width: 600px
+			position: fixed
+			top: 200px
 		h1
 			margin-top: 0
 			font-size: 3.5em

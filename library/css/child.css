@@ -471,6 +471,15 @@ body.home {
     background-attachment: fixed; }
     body.home .hero.active .bg .face {
       opacity: 1; }
+    body.home .hero.on .content {
+      opacity: 1; }
+    body.home .hero .content {
+      opacity: 0;
+      transition: opacity 0.5s ease-in-out;
+      transition-delay: 0.5s;
+      width: 600px;
+      position: fixed;
+      top: 200px; }
     body.home .hero h1 {
       margin-top: 0;
       font-size: 3.5em;

@@ -6,23 +6,23 @@ Template Name: Home Page
 
 <?php get_header(); ?>
 <div id="fullpage">
-	<section class="section hero ash pane-1 active" id="hero" style="">
+	<section class="section hero ash pane-1 active on" id="hero" style="">
 		<div class="bg"></div>
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-6">
-					<div class="content ">
+					<div class="content">
 						<h1>The Smartwatch That<br/>Can Save Your Life</h1>
 						<h2>A sleek and stylish smartwatch that continually monitors your heart for life-threatening emergencies</h2>
 						<form class="form-horizontal">
-						  <div class="form-group">
-						    <div class="col-sm-8 flush-right">
-						    	<input type="email" class="input-lg form-control" id="email" placeholder="Enter your email address">
-						    </div>
-						    <div class="col-sm-4 flush-left">
-						    	<button type="submit" class="btn btn-lg btn-primary">Get Notified</button>
-						    </div>
-						  </div>
+							<div class="form-group">
+								<div class="col-sm-8 flush-right">
+									<input type="email" class="input-lg form-control" id="email" placeholder="Enter your email address">
+								</div>
+								<div class="col-sm-4 flush-left">
+									<button type="submit" class="btn btn-lg btn-primary">Get Notified</button>
+								</div>
+							</div>
 						</form>
 					</div>
 				</div>
@@ -39,14 +39,14 @@ Template Name: Home Page
 						<h1>24/7 Heart Monitoring</h1>
 						<h2>Medical-grade sensors track your heart’s every beat. If your heart slows or stops, our dispatch team will be alerted.</h2>
 						<form class="form-horizontal">
-							  <div class="form-group">
-							    <div class="col-sm-8 flush-right">
-							    	<input type="email" class="input-lg form-control" id="email" placeholder="Enter your email address">
-							    </div>
-							    <div class="col-sm-4 flush-left">
-							    	<button type="submit" class="btn btn-lg btn-primary">Get Notified</button>
-							    </div>
-							  </div>
+								<div class="form-group">
+									<div class="col-sm-8 flush-right">
+										<input type="email" class="input-lg form-control" id="email" placeholder="Enter your email address">
+									</div>
+									<div class="col-sm-4 flush-left">
+										<button type="submit" class="btn btn-lg btn-primary">Get Notified</button>
+									</div>
+								</div>
 							</form>
 					</div>
 				</div>
@@ -65,14 +65,14 @@ Template Name: Home Page
 						<h1>Connected to Your<br/>Friends and Family</h1>
 						<h2>Friends, family, and emergency services are immediately contacted and know exactly where you are in an emergency.</h2>
 						<form class="form-horizontal">
-						  <div class="form-group">
-						    <div class="col-sm-8 flush-right">
-						    	<input type="email" class="input-lg form-control" id="email" placeholder="Enter your email address">
-						    </div>
-						    <div class="col-sm-4 flush-left">
-						    	<button type="submit" class="btn btn-lg btn-primary">Get Notified</button>
-						    </div>
-						  </div>
+							<div class="form-group">
+								<div class="col-sm-8 flush-right">
+									<input type="email" class="input-lg form-control" id="email" placeholder="Enter your email address">
+								</div>
+								<div class="col-sm-4 flush-left">
+									<button type="submit" class="btn btn-lg btn-primary">Get Notified</button>
+								</div>
+							</div>
 						</form>
 					</div>
 				</div>
@@ -89,14 +89,14 @@ Template Name: Home Page
 						<h1>Go Anywhere, Anytime.</h1>
 						<h2>Cellular connectivity gives you the the freedom to explore anywhere you want, whenever you want, and without fear.</h2>
 						<form class="form-horizontal">
-						  <div class="form-group">
-						    <div class="col-sm-8 flush-right">
-						    	<input type="email" class="input-lg form-control" id="email" placeholder="Enter your email address">
-						    </div>
-						    <div class="col-sm-4 flush-left">
-						    	<button type="submit" class="btn btn-lg btn-primary">Get Notified</button>
-						    </div>
-						  </div>
+							<div class="form-group">
+								<div class="col-sm-8 flush-right">
+									<input type="email" class="input-lg form-control" id="email" placeholder="Enter your email address">
+								</div>
+								<div class="col-sm-4 flush-left">
+									<button type="submit" class="btn btn-lg btn-primary">Get Notified</button>
+								</div>
+							</div>
 						</form>
 					</div>
 				</div>
@@ -115,14 +115,14 @@ Template Name: Home Page
 						<h1>Assistance On-Demand</h1>
 						<h2>One press of a button puts you in touch with our dispatchers who can send help your way, at any time and any place.</h2>
 						<form class="form-horizontal">
-						  <div class="form-group">
-						    <div class="col-sm-8 flush-right">
-						    	<input type="email" class="input-lg form-control" id="email" placeholder="Enter your email address">
-						    </div>
-						    <div class="col-sm-4 flush-left">
-						    	<button type="submit" class="btn btn-lg btn-primary">Get Notified</button>
-						    </div>
-						  </div>
+							<div class="form-group">
+								<div class="col-sm-8 flush-right">
+									<input type="email" class="input-lg form-control" id="email" placeholder="Enter your email address">
+								</div>
+								<div class="col-sm-4 flush-left">
+									<button type="submit" class="btn btn-lg btn-primary">Get Notified</button>
+								</div>
+							</div>
 						</form>
 					</div>
 				</div>
@@ -243,121 +243,175 @@ Template Name: Home Page
 			paddingTop: '70px',
 			css3: false,
 			fitToSection: false,
-			hybrid: true
+			hybrid: true,
+			onLeave: function(index, nextIndex, direction){
+				var leavingSection = $(this);
+
+				//after leaving section 2
+				if(index == 1 && direction =='down'){
+					$('.hero').removeClass('on');
+					$('.pane-2').addClass('on');
+				}
+
+				else if(index == 2 && direction == 'up'){
+					$('.hero').removeClass('on');
+					$('.pane-1').addClass('on');
+				} 
+
+				else if(index == 2 && direction =='down'){
+					$('.hero').removeClass('on');
+					$('.pane-3').addClass('on');
+				}
+
+				else if(index == 3 && direction == 'up'){
+					$('.hero').removeClass('on');
+					$('.pane-2').addClass('on');
+				} 
+
+				else if(index == 3 && direction =='down'){
+					$('.hero').removeClass('on');
+					$('.pane-4').addClass('on');
+				}
+
+				else if(index == 4 && direction == 'up'){
+					$('.hero').removeClass('on');
+					$('.pane-3').addClass('on');
+				} 
+
+				else if(index == 4 && direction =='down'){
+					$('.hero').removeClass('on');
+					$('.pane-5').addClass('on');
+				}
+
+				else if(index == 5 && direction == 'up'){
+					$('.hero').removeClass('on');
+					$('.pane-4').addClass('on');
+				} 
+
+				else if(index == 5 && direction =='down'){
+					$('.hero').removeClass('on');
+					$('.pane-6').addClass('on');
+				}
+
+				else if(index == 6 && direction == 'up'){
+					$('.hero').removeClass('on');
+					$('.pane-5').addClass('on');
+				} 
+			}
 		});
 
 		
 		$('#hero').bind('inview', function (event, visible, topOrBottomOrBoth) {
-		  if (visible == true) {
-		    
-		    if (topOrBottomOrBoth == 'top') {
-		      // top part of element is visible
-		    } else if (topOrBottomOrBoth == 'bottom') {
-		      // bottom part of element is visible
+			if (visible == true) {
+				
+				if (topOrBottomOrBoth == 'top') {
+					// top part of element is visible
+				} else if (topOrBottomOrBoth == 'bottom') {
+					// bottom part of element is visible
 
-		    } else {
-		      // whole part of element is visible
-		      $('.hero ').removeClass('active');
-		      $('#hero ').addClass('active');
-		    }
-		  } else {
-		    // element has gone out of viewport
-		    //$('.navbar').addClass('dark');
-		  }
+				} else {
+					// whole part of element is visible
+					$('.hero ').removeClass('active');
+					$('#hero ').addClass('active');
+				}
+			} else {
+				// element has gone out of viewport
+				//$('.navbar').addClass('dark');
+			}
 		});
 
 		$('#hero2').bind('inview', function (event, visible, topOrBottomOrBoth) {
-		  if (visible == true) {
-		    
-		    if (topOrBottomOrBoth == 'top') {
-		      // top part of element is visible
-		    } else if (topOrBottomOrBoth == 'bottom') {
-		      // bottom part of element is visible
-		      
+			if (visible == true) {
+				
+				if (topOrBottomOrBoth == 'top') {
+					// top part of element is visible
+				} else if (topOrBottomOrBoth == 'bottom') {
+					// bottom part of element is visible
+					
 
-		    } else {
-		      $('.hero ').removeClass('active');
-		      $('#hero2 ').addClass('active');
-		      
-		    }
-		  } else {
-		    // element has gone out of viewport
-		  }
+				} else {
+					$('.hero ').removeClass('active');
+					$('#hero2 ').addClass('active');
+					
+				}
+			} else {
+				// element has gone out of viewport
+			}
 		});
 
 		$('#hero3').bind('inview', function (event, visible, topOrBottomOrBoth) {
-		  if (visible == true) {
-		    
-		    if (topOrBottomOrBoth == 'top') {
-		      // top part of element is visible
-		    } else if (topOrBottomOrBoth == 'bottom') {
-		      // bottom part of element is visible
+			if (visible == true) {
+				
+				if (topOrBottomOrBoth == 'top') {
+					// top part of element is visible
+				} else if (topOrBottomOrBoth == 'bottom') {
+					// bottom part of element is visible
 
-		    } else {
-		      // whole part of element is visible
-		      $('.hero ').removeClass('active');
-		      $('#hero3 ').addClass('active');
-		    }
-		  } else {
-		    // element has gone out of viewport
-		  }
+				} else {
+					// whole part of element is visible
+					$('.hero ').removeClass('active');
+					$('#hero3 ').addClass('active');
+				}
+			} else {
+				// element has gone out of viewport
+			}
 		});
 
 		$('#hero4').bind('inview', function (event, visible, topOrBottomOrBoth) {
-		  if (visible == true) {
-		    
-		    if (topOrBottomOrBoth == 'top') {
-		      // top part of element is visible
-		    } else if (topOrBottomOrBoth == 'bottom') {
-		      // bottom part of element is visible
+			if (visible == true) {
+				
+				if (topOrBottomOrBoth == 'top') {
+					// top part of element is visible
+				} else if (topOrBottomOrBoth == 'bottom') {
+					// bottom part of element is visible
 
-		    } else {
-		      // whole part of element is visible
-		      $('.hero ').removeClass('active');
-		      $('#hero4 ').addClass('active');
-		    }
-		  } else {
-		    // element has gone out of viewport
-		  }
+				} else {
+					// whole part of element is visible
+					$('.hero ').removeClass('active');
+					$('#hero4 ').addClass('active');
+				}
+			} else {
+				// element has gone out of viewport
+			}
 		});
 
 		$('#hero5').bind('inview', function (event, visible, topOrBottomOrBoth) {
-		  if (visible == true) {
-		    
-		    if (topOrBottomOrBoth == 'top') {
-		      // top part of element is visible
-		    } else if (topOrBottomOrBoth == 'bottom') {
-		      // bottom part of element is visible
+			if (visible == true) {
+				
+				if (topOrBottomOrBoth == 'top') {
+					// top part of element is visible
+				} else if (topOrBottomOrBoth == 'bottom') {
+					// bottom part of element is visible
 
-		    } else {
-		      // whole part of element is visible
-		      $('.hero').removeClass('active');
-		      $('#hero5').addClass('active');
-		      $('.navbar').removeClass('dark');
-		      $('.hero .bg').show();
-		    }
-		  } else {
-		    // element has gone out of viewport
-		  }
+				} else {
+					// whole part of element is visible
+					$('.hero').removeClass('active');
+					$('#hero5').addClass('active');
+					$('.navbar').removeClass('dark');
+					$('.hero .bg').show();
+				}
+			} else {
+				// element has gone out of viewport
+			}
 		});
 
 		$('#features').bind('inview', function (event, visible, topOrBottomOrBoth) {
-		  if (visible == true) {
-		    
-		    if (topOrBottomOrBoth == 'top') {
-		      // top part of element is visible
-		    } else if (topOrBottomOrBoth == 'bottom') {
-		      // bottom part of element is visible
+			if (visible == true) {
+				
+				if (topOrBottomOrBoth == 'top') {
+					// top part of element is visible
+				} else if (topOrBottomOrBoth == 'bottom') {
+					// bottom part of element is visible
 
-		    } else {
-		      // whole part of element is visible
-		      $('.hero ').removeClass('active');
-		      $('.hero .bg').hide();
-		      $('.navbar').addClass('dark');
-		    }
-		  } else {
-		    // element has gone out of viewport
-		  }
+				} else {
+					// whole part of element is visible
+					$('.hero ').removeClass('active');
+					$('.hero .bg').hide();
+					$('.navbar').addClass('dark');
+				}
+			} else {
+				// element has gone out of viewport
+			}
 		});
 
 		
