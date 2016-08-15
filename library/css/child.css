@@ -435,7 +435,7 @@ form.intake-form .form-group {
   background: rgba(0, 0, 0, 0.55);
   border: none; }
   .navbar.dark {
-    background: #0a1334; }
+    background: rgba(0, 0, 0, 0.95); }
   .navbar .navbar-header .navbar-brand {
     display: block;
     background: url("../images/logo-2x.png") center 15px no-repeat;
@@ -454,6 +454,13 @@ form.intake-form .form-group {
 
 body.home {
   padding-top: 0; }
+  body.home .navbar-fixed-bottom {
+    background: rgba(0, 0, 0, 0.55); }
+    body.home .navbar-fixed-bottom .form-control {
+      height: 51px;
+      border: none;
+      border-radius: 4px;
+      padding: 10px 15px; }
   body.home section {
     padding: 4em 0; }
     body.home section h1, body.home section h2, body.home section h3 {
@@ -469,6 +476,11 @@ body.home {
     text-align: left;
     position: relative;
     background-attachment: fixed; }
+    body.home .hero .form-control {
+      height: 51px;
+      border: none;
+      border-radius: 4px;
+      padding: 10px 15px; }
     body.home .hero.active .bg .face {
       opacity: 1; }
     body.home .hero.on .content {
@@ -477,9 +489,10 @@ body.home {
       opacity: 0;
       transition: opacity 0.5s ease-in-out;
       transition-delay: 0.5s;
-      width: 600px;
+      width: 580px;
       position: fixed;
-      top: 200px; }
+      top: 220px;
+      z-index: 3; }
     body.home .hero h1 {
       margin-top: 0;
       font-size: 3.5em;
@@ -487,8 +500,8 @@ body.home {
       color: white; }
     body.home .hero h2 {
       font-weight: normal;
-      font-size: 19px;
-      margin-bottom: 1.5em;
+      font-size: 21px;
+      margin-bottom: 1.85em;
       text-align: left;
       color: white;
       line-height: 1.4; }
@@ -562,15 +575,10 @@ body.home {
       left: 50%;
       bottom: 40px;
       margin-left: -20px;
-      z-index: 99; }
+      z-index: 3; }
       body.home .hero .scroll i, body.home .hero .scroll2 i {
         font-size: 2em;
         color: rgba(255, 255, 255, 0.78); }
-    body.home .hero .form-control {
-      height: 51px;
-      border: none;
-      border-radius: 4px;
-      padding: 10px 15px; }
   body.home .logos {
     background: #efefef;
     padding: 1.5em 0;
