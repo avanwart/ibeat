@@ -3414,6 +3414,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/library\/images\/go-anywhere.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 334014,
+		"inputAbbreviatedPath": "\/library\/images\/go-anywhere.jpg",
+		"outputAbbreviatedPath": "\/library\/images\/go-anywhere.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/library\/images\/hero-bg.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
@@ -3443,6 +3454,17 @@
 		"initialSize": 92534,
 		"inputAbbreviatedPath": "\/library\/images\/hiking-trail.jpg",
 		"outputAbbreviatedPath": "\/library\/images\/hiking-trail.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/library\/images\/lamp.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 44963,
+		"inputAbbreviatedPath": "\/library\/images\/lamp.jpg",
+		"outputAbbreviatedPath": "\/library\/images\/lamp.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
