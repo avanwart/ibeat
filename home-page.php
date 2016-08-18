@@ -6,7 +6,7 @@ Template Name: Home Page
 
 <?php get_header(); ?>
 <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/library/css/bootstrap-switch.min.css">
-<nav class="navbar navbar-default navbar-fixed-bottom" role="navigation" id="cta-bar">
+<nav class="navbar navbar-default navbar-fixed-bottom" role="navigation" id="cta-bar" style="display: none">
 	<div class="container">
 		<div class="row">
 			<div class="col-sm-4 flush-right">
@@ -38,14 +38,24 @@ Template Name: Home Page
 					<div class="content">
 						<h1>Introducing the Smartwatch That Can Save Your Life</h1>
 						<h2>A sleek and stylish smartwatch that continually <br class="hidden-xs">monitors your heart for life-threatening emergencies</h2>
+						<form class="form-horizontal">
+							<div class="form-group">
+								<div class="col-sm-8 col-md-7 flush-right">
+									<input type="email" class="input-lg form-control" id="email" placeholder="Enter your email address">
+								</div>
+								<div class="col-sm-4 col-md-5 flush-left">
+									<button type="submit" class="btn btn-lg btn-primary btn-block">Sign Up</button>
+								</div>
+							</div>
+						</form>
 					</div>
 				</div>
 				<div class="col-sm-6 text-center">
-						<input class="switch" type="checkbox" name="switch" checked>
-						<!-- <ol class="carousel-indicators">
+						<!-- <input class="switch" type="checkbox" name="switch" checked> -->
+						<ol class="carousel-indicators">
 							<li id="watch1" class="active"></li>
 							<li id="watch2" class=""></li>
-						</ol> -->
+						</ol>
 				</div>
 			</div>
 		</div>
@@ -222,21 +232,21 @@ Template Name: Home Page
 	jQuery(document).ready(function($){
 
 		// Hero slides
-		// setInterval(function(){
-		//   $('#hero .bg').toggleClass('active')
-		//   $('#hero .carousel-indicators li').toggleClass('active')
-		// }, 5000);
+		setInterval(function(){
+		  $('#hero .bg').toggleClass('active')
+		  $('#hero .carousel-indicators li').toggleClass('active')
+		}, 5000);
 
 
 
-		$("[name='switch']").bootstrapSwitch({
-			onText: 'Silver',
-			offText: 'Blue'
-		});
+		// $("[name='switch']").bootstrapSwitch({
+		// 	onText: 'Silver',
+		// 	offText: 'Blue'
+		// });
 
-		$('input[name="switch"]').on('switchChange.bootstrapSwitch', function(event, state) {
-  		$('#hero .bg').toggleClass('active')
-		});
+		// $('input[name="switch"]').on('switchChange.bootstrapSwitch', function(event, state) {
+  // 		$('#hero .bg').toggleClass('active')
+		// });
 
 
 		$('#watch1').click(function(){
@@ -266,11 +276,17 @@ Template Name: Home Page
 				if(index == 1 && direction =='down'){
 					$('.hero').removeClass('on');
 					$('.pane-2').addClass('on');
+					//alert('show');
+					$('#cta-bar').fadeIn();
+
 				}
 
 				else if(index == 2 && direction == 'up'){
 					$('.hero').removeClass('on');
 					$('.pane-1').addClass('on');
+					//alert('hide');
+					$('#cta-bar').fadeOut();
+					
 				} 
 
 				else if(index == 2 && direction =='down'){
@@ -321,13 +337,16 @@ Template Name: Home Page
 				
 				if (topOrBottomOrBoth == 'top') {
 					// top part of element is visible
+
 				} else if (topOrBottomOrBoth == 'bottom') {
 					// bottom part of element is visible
+
 
 				} else {
 					// whole part of element is visible
 					$('.hero ').removeClass('active');
 					$('#hero ').addClass('active');
+
 				}
 			} else {
 				// element has gone out of viewport
@@ -347,6 +366,7 @@ Template Name: Home Page
 				} else {
 					$('.hero ').removeClass('active');
 					$('#hero2 ').addClass('active');
+					
 					
 				}
 			} else {
