@@ -526,6 +526,10 @@ body.home {
     body.home .hero .bootstrap-switch-label {
       background: url("../images/micro-ui.jpg") repeat;
       background-size: 2px 2px; }
+    body.home .hero label {
+      font-weight: normal;
+      font-size: 14px;
+      color: white; }
     body.home .hero .form-control {
       height: 51px;
       border: none;

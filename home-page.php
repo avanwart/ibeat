@@ -39,6 +39,7 @@ Template Name: Home Page
 						<h1>Introducing the Smartwatch That Can Save Your Life</h1>
 						<h2>A sleek and stylish smartwatch that continually <br class="hidden-xs">monitors your heart for life-threatening emergencies</h2>
 						<form class="form-horizontal">
+							<label for="email">Sign up for an early discount &amp; announcements:</label>
 							<div class="form-group">
 								<div class="col-sm-8 col-md-7 flush-right">
 									<input type="email" class="input-lg form-control" id="email" placeholder="Enter your email address">
