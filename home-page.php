@@ -5,26 +5,47 @@ Template Name: Home Page
 ?>
 
 <?php get_header(); ?>
+<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/library/css/bootstrap-switch.min.css">
+<nav class="navbar navbar-default navbar-fixed-bottom" role="navigation" id="cta-bar">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-4 flush-right">
+				<label for="email">Sign up for an early discount &amp; announcements:</label>
+			</div>
+			<div class="col-sm-6 text-center">
+				<form class="form-horizontal">
+					<div class="form-group">
+						<div class="col-sm-8 col-md-7 flush-right">
+							<input type="email" class="input-lg form-control" id="email" placeholder="Enter your email address">
+						</div>
+						<div class="col-sm-4 col-md-5 flush-left">
+							<button type="submit" class="btn btn-lg btn-primary btn-block">Sign Up</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+		
+	</div>
+</nav>
 <div id="fullpage">
 	<section class="section hero ash pane-1 active on" id="hero" style="">
-		<div class="bg"></div>
+		<div class="bg active" id="boy"></div>
+		<div class="bg girl" id="girl"></div>
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-6">
 					<div class="content">
-						<h1>The Smartwatch That<br/>Can Save Your Life</h1>
-						<h2>A sleek and stylish smartwatch that continually monitors your heart for life-threatening emergencies</h2>
-						<form class="form-horizontal">
-							<div class="form-group">
-								<div class="col-sm-8 flush-right">
-									<input type="email" class="input-lg form-control" id="email" placeholder="Enter your email address">
-								</div>
-								<div class="col-sm-4 flush-left">
-									<button type="submit" class="btn btn-lg btn-primary">Get Notified</button>
-								</div>
-							</div>
-						</form>
+						<h1>Introducing the Smartwatch That Can Save Your Life</h1>
+						<h2>A sleek and stylish smartwatch that continually <br class="hidden-xs">monitors your heart for life-threatening emergencies</h2>
 					</div>
+				</div>
+				<div class="col-sm-6 text-center">
+						<input class="switch" type="checkbox" name="switch" checked>
+						<!-- <ol class="carousel-indicators">
+							<li id="watch1" class="active"></li>
+							<li id="watch2" class=""></li>
+						</ol> -->
 				</div>
 			</div>
 		</div>
@@ -38,16 +59,6 @@ Template Name: Home Page
 					<div class="content">
 						<h1>24/7 Heart Monitoring</h1>
 						<h2>Medical-grade sensors track your heart’s every beat. If your heart slows or stops, our dispatch team will be alerted.</h2>
-						<form class="form-horizontal">
-								<div class="form-group">
-									<div class="col-sm-8 flush-right">
-										<input type="email" class="input-lg form-control" id="email" placeholder="Enter your email address">
-									</div>
-									<div class="col-sm-4 flush-left">
-										<button type="submit" class="btn btn-lg btn-primary">Get Notified</button>
-									</div>
-								</div>
-							</form>
 					</div>
 				</div>
 			</div>
@@ -64,16 +75,6 @@ Template Name: Home Page
 					<div class="content">
 						<h1>Connected to Your<br/>Friends and Family</h1>
 						<h2>Friends, family, and emergency services are immediately contacted and know exactly where you are in an emergency.</h2>
-						<form class="form-horizontal">
-							<div class="form-group">
-								<div class="col-sm-8 flush-right">
-									<input type="email" class="input-lg form-control" id="email" placeholder="Enter your email address">
-								</div>
-								<div class="col-sm-4 flush-left">
-									<button type="submit" class="btn btn-lg btn-primary">Get Notified</button>
-								</div>
-							</div>
-						</form>
 					</div>
 				</div>
 			</div>
@@ -88,16 +89,6 @@ Template Name: Home Page
 					<div class="content">
 						<h1>Go Anywhere, Anytime.</h1>
 						<h2>Cellular connectivity gives you the the freedom to explore anywhere you want, whenever you want, and without fear.</h2>
-						<form class="form-horizontal">
-							<div class="form-group">
-								<div class="col-sm-8 flush-right">
-									<input type="email" class="input-lg form-control" id="email" placeholder="Enter your email address">
-								</div>
-								<div class="col-sm-4 flush-left">
-									<button type="submit" class="btn btn-lg btn-primary">Get Notified</button>
-								</div>
-							</div>
-						</form>
 					</div>
 				</div>
 			</div>
@@ -114,16 +105,6 @@ Template Name: Home Page
 					<div class="content">
 						<h1>Assistance On-Demand</h1>
 						<h2>One press of a button puts you in touch with our dispatchers who can send help your way, at any time and any place.</h2>
-						<form class="form-horizontal">
-							<div class="form-group">
-								<div class="col-sm-8 flush-right">
-									<input type="email" class="input-lg form-control" id="email" placeholder="Enter your email address">
-								</div>
-								<div class="col-sm-4 flush-left">
-									<button type="submit" class="btn btn-lg btn-primary">Get Notified</button>
-								</div>
-							</div>
-						</form>
 					</div>
 				</div>
 			</div>
@@ -227,6 +208,7 @@ Template Name: Home Page
 </div>
 
 <script src="<?php bloginfo('template_directory'); ?>/library/js/min/app-min.js"></script>
+<script src="<?php bloginfo('template_directory'); ?>/library/js/bootstrap-switch.min.js"></script>
 	<!-- <script>
 		var windowHeight = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
 		var divHeight = windowHeight;
@@ -238,6 +220,39 @@ Template Name: Home Page
 	
 
 	jQuery(document).ready(function($){
+
+		// Hero slides
+		// setInterval(function(){
+		//   $('#hero .bg').toggleClass('active')
+		//   $('#hero .carousel-indicators li').toggleClass('active')
+		// }, 5000);
+
+
+
+		$("[name='switch']").bootstrapSwitch({
+			onText: 'Silver',
+			offText: 'Blue'
+		});
+
+		$('input[name="switch"]').on('switchChange.bootstrapSwitch', function(event, state) {
+  		$('#hero .bg').toggleClass('active')
+		});
+
+
+		$('#watch1').click(function(){
+			alert('click');
+			$('#hero .bg').removeClass('active');
+			$('#boy').addClass('active');
+			$('#hero .carousel-indicators li').removeClass('active');
+			$(this).addClass('active');
+		});
+
+		$('#watch2').click(function(){
+			$('#hero .bg').removeClass('active');
+			$('#girl').addClass('active');
+			$('#hero .carousel-indicators li').removeClass('active');
+			$(this).addClass('active');
+		});
 
 		$('#fullpage').fullpage({
 			paddingTop: '70px',
@@ -387,7 +402,6 @@ Template Name: Home Page
 					// whole part of element is visible
 					$('.hero').removeClass('active');
 					$('#hero5').addClass('active');
-					$('.navbar').removeClass('dark');
 					$('.hero .bg').show();
 				}
 			} else {
@@ -407,10 +421,45 @@ Template Name: Home Page
 					// whole part of element is visible
 					$('.hero ').removeClass('active');
 					$('.hero .bg').hide();
-					$('.navbar').addClass('dark');
 				}
 			} else {
 				// element has gone out of viewport
+			}
+		});
+
+		$('#faq').bind('inview', function (event, visible, topOrBottomOrBoth) {
+			if (visible == true) {
+				
+				if (topOrBottomOrBoth == 'top') {
+					// top part of element is visible
+				} else if (topOrBottomOrBoth == 'bottom') {
+					// bottom part of element is visible
+
+				} else {
+					// whole part of element is visible
+					$('.hero ').removeClass('active');
+					$('.hero .bg').hide();
+					console.log('faq');
+				}
+			} else {
+				// element has gone out of viewport
+			}
+		});
+
+		$('.footer').bind('inview', function (event, visible, topOrBottomOrBoth) {
+			if (visible == true) {
+				
+				if (topOrBottomOrBoth == 'top') {
+					// top part of element is visible
+				} else if (topOrBottomOrBoth == 'bottom') {
+					// bottom part of element is visible
+
+				} else {
+					// whole part of element is visible
+					$('#cta-bar').fadeOut();
+				}
+			} else {
+				$('#cta-bar').fadeIn();
 			}
 		});
 
@@ -436,6 +485,10 @@ Template Name: Home Page
 		$('.scroll, .scroll2 a').smoothScroll({
 			offset: 0,
 			easing: 'swing'
+		});
+
+		$(window).on('beforeunload', function() {
+			$(window).scrollTop(0);
 		});
 
 
